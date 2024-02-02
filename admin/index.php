@@ -87,7 +87,7 @@ $busca->execute();
 </head>
 <body>
 <header>
-        <a href=""><img src="../img/MYBURGUER.png" width="150px"></a>
+        <a href="/burguer"><img src="../img/MYBURGUER.png" width="150px"></a>
         <div class="header-right">
             <nav>
                 <ul class="menu">

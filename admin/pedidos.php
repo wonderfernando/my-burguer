@@ -1,3 +1,9 @@
+<?php
+include "../config.php";
+
+$busca = $con->prepare("SELECT * FROM pedidos");
+$busca->execute();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,7 +87,7 @@
 </head>
 <body>
 <header>
-        <a href=""><img src="../img/MYBURGUER.png" width="150px"></a>
+        <a href="/burguer"><img src="../img/MYBURGUER.png" width="150px"></a>
         <div class="header-right">
             <nav>
                 <ul class="menu">
@@ -104,15 +110,19 @@
                     <th>Data</th>
                     <th>Total</th>
                 </tr>
-
+                <?php
+                while ($item = $busca->fetch()) {
+    ?>
                 <tr>
-                    <td>fughj hjy</td>
-                    <td>fughj hjy</td>
-                    <td>4</td>
-                    <td>dsad</td>
-                    <td>11</td>
-                    <td>2554</td>
+                    <td><?php echo $item["nome"]; ?></td>
+                    <td><?php echo $item["produto"]; ?></td>
+                    <td><?php echo $item["quantidade"]; ?></td>
+                    <td><?php echo $item["endereco"]; ?></td>
+                    <td><?php echo $item["data"]; ?></td>
+                    <td><?php echo $item["total"]; ?></td>
                 </tr>
+
+                <?php } ?>
             </table>
         </div>
     

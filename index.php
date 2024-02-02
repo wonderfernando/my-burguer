@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 
-$busca = $con->prepare("SELECT * FROM produtos limit 4");
+$busca = $con->prepare("SELECT * FROM produtos ");
 $busca->execute();
 ?>
 <!DOCTYPE html>
@@ -182,9 +182,9 @@ $busca->execute();
             <nav>
                 <ul class="menu">
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Pedidos</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#bg">Menu</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
             <span>|</span>
@@ -198,7 +198,7 @@ $busca->execute();
             <strong>Hmmmmm! Yummy</strong>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <div class="about-left">
              <div class="info">
                 <h1>Sobre a MYBURGUER</h1>
@@ -220,7 +220,7 @@ $busca->execute();
         </strong>
     </div>
 
-    <div class="more">
+    <div class="more" id="bg">
         <h1>Mais Pedidos</h1>
         <div class="items">
 
@@ -233,14 +233,14 @@ $busca->execute();
                 <h3><?php echo $item["nome"]; ?></h3>
                  <span><?php echo $item["preco"]; ?>Kz</span>
  
-                  <a href=<?php echo "/burguer/finalizar.php?id=".$item["id"]."&nome=".$item["nome"]."&preco=".$item["preco"]; ?>><button>Adicionar <img width="20px" src="./img/icons/carrinho-de-compras.png" alt=""></button></a>  
+                  <a href="<?php echo "/burguer/finalizar.php?id=".$item["id"]."&nome=".$item["nome"]."&preco=".$item["preco"]; ?>"><button>Adicionar <img width="20px" src="./img/icons/carrinho-de-compras.png" alt=""></button></a>  
              
             </div>
             <?php } ?>
         </div>
     </div>
 
-    <footer>
+    <footer id="contacto">
         <div>
             <h1>Contatos</h1>
             <ul>

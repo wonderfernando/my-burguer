@@ -243,7 +243,7 @@ include "config.php";
         </div>
         <div>
             <label for="">Preco unitario</label>
-            <input type="number" value="2" id="preco" name="" readonly>
+            <input type="number" value="2" id="preco"  value="<?php echo $preco; ?>"  name="" readonly>
         </div>
         <div>
             <label for="">Total</label>
@@ -281,8 +281,9 @@ include "config.php";
             const total = document.getElementById("total")
             const quanta = document.getElementById("quantidade")
             const unit = document.getElementById("preco")
-          console.log(unit)
-
+          
+            total.value = Number(quanta.value) * unit.value
+           
             quanta.addEventListener("change",  (params) => {
              total.value = Number(params.target.value) * unit.value
                 
