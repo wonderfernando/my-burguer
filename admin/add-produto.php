@@ -114,7 +114,7 @@
             <h1>Adicionar Produtos</h1>
        
             <br><br>
-             <form action="">
+             <form method="post" action="store-produto.php" enctype="multipart/form-data">
                 <div>
                     <label for="">Nome do produto</label>
                     <input type="text" placeholder="Produto" name="nome" id="">
