@@ -209,14 +209,14 @@ include "config.php";
 </head>
 <body>
     <header>
-        <a href=""><img src="./img/MYBURGUER.png" width="150px"></a>
+        <a href="/burguer"><img src="./img/MYBURGUER.png" width="150px"></a>
         <div class="header-right">
             <nav>
                 <ul class="menu">
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="/burguer">Inicio</a></li>
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Menu</a></li>
-                    <li><a href="#">Pedidos</a></li>
+      
                 </ul>
             </nav>
             <span>|</span>
