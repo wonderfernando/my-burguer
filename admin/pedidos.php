@@ -52,7 +52,8 @@
             text-transform: uppercase;
         }
         .main{
-          
+            padding-left: 1rem;
+          padding-right: 1rem;
             max-width:  920px;
             margin:50px auto;
         }
@@ -84,8 +85,8 @@
         <div class="header-right">
             <nav>
                 <ul class="menu">
-                      <li><a href="/admin">Produtos</a></li>
-                    <li><a href="/admin/burguer/pedidos.php">Pedidos</a></li>
+                      <li><a href="/burguer/admin">Produtos</a></li>
+                    <li><a href="/burguer/admin/pedidos.php">Pedidos</a></li>
                 </ul>
             </nav>
          </div>

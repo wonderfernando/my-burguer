@@ -66,6 +66,24 @@
             padding: .5rem;
             border-bottom: 1px solid rgba(0,0,0,0.2);
         }
+        input{
+            width: 100%;
+            padding: .5rem;
+            border-radius: 5px;
+            height: 2rem;
+            border: none;
+            background-color: #f1f1f1;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        form div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
         .btn-add{
             padding: .5rem;
             cursor: pointer;
@@ -93,23 +111,30 @@
          </div>
     </header>
         <div class="main">
-            <h1>Produtos</h1>
-            <br>
-            <a href="/burguer/admin/add-produto.php"><button class="btn-add">Adicionar</button></a>
+            <h1>Adicionar Produtos</h1>
+       
             <br><br>
-            <table>
-                <tr>
-                    <th>Nome</th>
-                    <th>Preco</th>
-                    <th>Quantidadde</th>
-                </tr>
-
-                <tr>
-                    <td>fughj hjy</td>
-                    <td>4</td>
-                    <td>3</td>
-                </tr>
-            </table>
+             <form action="">
+                <div>
+                    <label for="">Nome do produto</label>
+                    <input type="text" placeholder="Produto" name="nome" id="">
+                </div>
+                <div>
+                    <label for="">Preco do produto</label>
+                    <input type="number" placeholder="Preco" name="preco" id="">
+                </div>
+                <div>
+                    <label for="">Quantidade produto</label>
+                    <input type="number" placeholder="Quantidade" name="quantidade" id="">
+                </div>
+                <div>
+                    <label for="">Imagem</label>
+                    <input type="file" placeholder="Produto" name="image" id="">
+                </div>
+                <div>
+                    <button class="btn-add">Salvar</button>
+                </div>
+             </form>
         </div>
     
 
