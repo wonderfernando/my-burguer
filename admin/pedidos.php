@@ -84,29 +84,33 @@
         <div class="header-right">
             <nav>
                 <ul class="menu">
-                    <li><a href="/admin">Produtos</a></li>
+                      <li><a href="/admin">Produtos</a></li>
                     <li><a href="/admin/burguer/pedidos.php">Pedidos</a></li>
-              
                 </ul>
             </nav>
          </div>
     </header>
         <div class="main">
-            <h1>Produtos</h1>
+            <h1>Pedidos</h1>
             <br>
-            <a href=""><button class="btn-add">Adicionar</button></a>
-            <br><br>
+             
             <table>
                 <tr>
                     <th>Nome</th>
-                    <th>Preco</th>
+                    <th>item</th>
                     <th>Quantidadde</th>
+                    <th>Endereco</th>
+                    <th>Data</th>
+                    <th>Total</th>
                 </tr>
 
                 <tr>
                     <td>fughj hjy</td>
+                    <td>fughj hjy</td>
                     <td>4</td>
-                    <td>3</td>
+                    <td>dsad</td>
+                    <td>11</td>
+                    <td>2554</td>
                 </tr>
             </table>
         </div>
