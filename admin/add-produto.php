@@ -129,7 +129,8 @@
                 </div>
                 <div>
                     <label for="">Imagem</label>
-                    <input type="file" placeholder="Produto" name="image" id="">
+                    <input type="file" required
+                     placeholder="Produto" name="image" id="">
                 </div>
                 <div>
                     <button class="btn-add">Salvar</button>

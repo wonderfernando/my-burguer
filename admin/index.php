@@ -1,3 +1,9 @@
+<?php
+include "../config.php";
+
+$busca = $con->prepare("SELECT * FROM produtos");
+$busca->execute();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,12 +109,15 @@
                     <th>Preco</th>
                     <th>Quantidadde</th>
                 </tr>
-
+<?php
+    while ($item = $busca->fetch()) {
+    ?>
                 <tr>
-                    <td>fughj hjy</td>
-                    <td>4</td>
-                    <td>3</td>
+                    <td><?php echo $item["nome"]; ?></td>
+                    <td><?php echo $item["preco"]; ?></td>
+                    <td><?php echo $item["quantidade"]; ?></td>
                 </tr>
+                <?php } ?>
             </table>
         </div>
     

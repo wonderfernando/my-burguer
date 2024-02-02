@@ -1,3 +1,9 @@
+<?php
+include "config.php";
+
+$busca = $con->prepare("SELECT * FROM produtos limit 4");
+$busca->execute();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -217,14 +223,20 @@
     <div class="more">
         <h1>Mais Pedidos</h1>
         <div class="items">
+
+        <?php
+            while ($item = $busca->fetch()) {
+           
+        ?>
             <div class="item">
-                <img class="img-item" src="./img/cheeseburger-gourmet-grelhado-com-legumes-frescos-e-batatas-fritas-geradas-por-ia.jpg" alt="">
-                <h3>Hambúrguer duplo</h3>
-                 <span>2000Kz</span>
-                <form action="">
-                    <button>Adicionar <img width="20px" src="./img/icons/carrinho-de-compras.png" alt=""></button>
-                </form>
+                <img class="img-item" src=<?php echo "img/".$item["img"]; ?> alt="">
+                <h3><?php echo $item["nome"]; ?></h3>
+                 <span><?php echo $item["preco"]; ?>Kz</span>
+ 
+                  <a href=<?php echo "/burguer/finalizar.php?id=".$item["id"]."&nome=".$item["nome"]."&preco=".$item["preco"]; ?>><button>Adicionar <img width="20px" src="./img/icons/carrinho-de-compras.png" alt=""></button></a>  
+             
             </div>
+            <?php } ?>
         </div>
     </div>
 

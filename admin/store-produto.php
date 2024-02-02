@@ -5,7 +5,7 @@ $preco = $_POST["preco"];
 $quantidade = $_POST["quantidade"];
 $img = $_FILES["image"];
 $caminho = $img["name"];
-move_uploaded_file($img["tmp_name"], "../".$caminho);
+move_uploaded_file($img["tmp_name"], "../img/".$caminho);
 
 
 $insert = $con->prepare("INSERT INTO produtos (nome, preco, quantidade,img) 

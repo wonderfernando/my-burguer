@@ -1,3 +1,9 @@
+<?php
+include "config.php";
+    $id = $_GET["id"];
+    $nome = $_GET["nome"];
+    $preco= $_GET["preco"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,24 +227,29 @@
     
   <div class="final">
   
-    <form action="" method="post">
-        <h1>Frango panado</h1>
+    <form action="store-pedido.php" method="post">
+        <h1><?php echo $nome ?></h1>
         <div>
             <label for="">Nome</label>
-            <input type="text">
+            <input type="text" name="nome">
         </div>
         <div>
             <label for="">Endereco</label>
-            <input type="text">
+            <input type="text" name="endereco">
         </div>
         <div>
             <label for="">Quantidade</label>
-            <input type="number">
+            <input type="number" value="1" id="quantidade" name="quantidade">
+        </div>
+        <div>
+            <label for="">Preco unitario</label>
+            <input type="number" value="2" id="preco" name="" readonly>
         </div>
         <div>
             <label for="">Total</label>
-            <input readonly type="number">
+            <input readonly type="number" id="total" name="total">
         </div>
+        <input  type="hidden" value="<?php echo $nome; ?>" name="produto" >
         <div>
             <button>Confirmar pedido</button>
         </div>
@@ -266,5 +277,16 @@
             
         </div>
     </footer>
+    <script>
+            const total = document.getElementById("total")
+            const quanta = document.getElementById("quantidade")
+            const unit = document.getElementById("preco")
+          console.log(unit)
+
+            quanta.addEventListener("change",  (params) => {
+             total.value = Number(params.target.value) * unit.value
+                
+            })
+</script>
 </body>
 </html>
